@@ -1,0 +1,91 @@
+{
+  "case": "standard",
+  "registry": [
+    {
+      "id": "F1",
+      "site_key": "MIA-1",
+      "name_key": "acme",
+      "address_key": "10 main st",
+      "zip_code": "33101"
+    },
+    {
+      "id": "F2",
+      "site_key": "MIA-2",
+      "name_key": "acme",
+      "address_key": "20 main st",
+      "zip_code": "33101"
+    },
+    {
+      "id": "F3",
+      "site_key": "X-3",
+      "name_key": "shared",
+      "address_key": "1 port rd",
+      "zip_code": "33132"
+    },
+    {
+      "id": "F4",
+      "site_key": "X-4",
+      "name_key": "shared",
+      "address_key": "1 port rd",
+      "zip_code": "33132"
+    },
+    {
+      "id": "F5",
+      "site_key": "NY-5",
+      "name_key": "north",
+      "address_key": "2 dock ave",
+      "zip_code": "00501"
+    }
+  ],
+  "incoming": [
+    {
+      "id": "I1",
+      "site_key": "MIA-2",
+      "name_key": "acme",
+      "address_key": "10 main st",
+      "zip_code": "33101"
+    },
+    {
+      "id": "I2",
+      "site_key": "",
+      "name_key": "acme",
+      "address_key": "10 main st",
+      "zip_code": "33101"
+    },
+    {
+      "id": "I3",
+      "site_key": "",
+      "name_key": "shared",
+      "address_key": "1 port rd",
+      "zip_code": "33132"
+    },
+    {
+      "id": "I4",
+      "site_key": "UNKNOWN",
+      "name_key": "acme",
+      "address_key": "10 main st",
+      "zip_code": "33101"
+    },
+    {
+      "id": "I5",
+      "site_key": "",
+      "name_key": "north",
+      "address_key": "2 dock ave",
+      "zip_code": "00501"
+    },
+    {
+      "id": "I6",
+      "site_key": "",
+      "name_key": "acme",
+      "address_key": "10 main st",
+      "zip_code": "33102"
+    },
+    {
+      "id": "I7",
+      "site_key": "",
+      "name_key": "",
+      "address_key": "",
+      "zip_code": ""
+    }
+  ]
+}

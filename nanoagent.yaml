@@ -1,0 +1,28 @@
+_ > nanoagent.plugin.v0001.ManifestConfig:
+id: tonylexfi-facility-link
+name: Facility Link Resolver
+version: 0.1.0
+status: ready
+spec: nanoagent.plugin/v0001
+runtime > nanoagent.plugin.v0001.RuntimeConfig:
+  type: mcp_stdio
+  command: [uv, run, --frozen, python, -m, plugin]
+permissions > nanoagent.plugin.v0001.PermissionsConfig:
+  network > nanoagent.plugin.v0001.NetworkConfig:
+    hosts: []
+  filesystem > nanoagent.plugin.v0001.FilesystemConfig:
+    write: [workspace]
+tools > dict[contract.Tool, nanoagent.plugin.v0001.ToolConfig]:
+  read_case:
+    description: Read the selected immutable synthetic case
+  write_result:
+    description: Write the complete proposed answer into result.json
+  reference:
+    description: Pin the hidden ground-truth snapshot before the agent starts
+tasks > dict[contract.Task, nanoagent.plugin.v0001.TaskConfig]:
+  tonylexfi-facility-link:
+    description: "Link facility records with exact keys while explicitly abstaining on ambiguous or conflicting matches."
+    runner: agent
+    tools: [read_case, write_result]
+    reference: reference
+    instructions: "Call read_case with the task case. Match each incoming record, sorted by id. If site_key is nonempty, match that key exactly; do not fall back to name/address if it is unknown. Otherwise all name_key/address_key/zip_code must be nonempty and equal to the registry strings exactly. One match => return its id and method site_key or composite. Multiple matches => facility_id null, method ambiguous. Zero => null, unmatched. Do not trim, casefold, fuzzy-match or convert ZIP to a number; the keys are already prepared. Call write_result with the complete answer. Then submit its returned path and count. Do not claim a live connection: all data is explicitly synthetic."

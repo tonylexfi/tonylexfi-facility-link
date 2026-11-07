@@ -1,0 +1,13 @@
+{
+  "case": "boundary",
+  "registry": [],
+  "incoming": [
+    {
+      "id": "B1",
+      "site_key": "",
+      "name_key": "acme",
+      "address_key": "10 main st",
+      "zip_code": "00501"
+    }
+  ]
+}

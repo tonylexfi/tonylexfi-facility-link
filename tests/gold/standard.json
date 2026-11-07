@@ -1,0 +1,39 @@
+{
+  "rows": [
+    {
+      "record_id": "I1",
+      "facility_id": "F2",
+      "method": "site_key"
+    },
+    {
+      "record_id": "I2",
+      "facility_id": "F1",
+      "method": "composite"
+    },
+    {
+      "record_id": "I3",
+      "facility_id": null,
+      "method": "ambiguous"
+    },
+    {
+      "record_id": "I4",
+      "facility_id": null,
+      "method": "unmatched"
+    },
+    {
+      "record_id": "I5",
+      "facility_id": "F5",
+      "method": "composite"
+    },
+    {
+      "record_id": "I6",
+      "facility_id": null,
+      "method": "unmatched"
+    },
+    {
+      "record_id": "I7",
+      "facility_id": null,
+      "method": "unmatched"
+    }
+  ]
+}
